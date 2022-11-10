@@ -23,16 +23,16 @@
   <body onscroll="onScroll()" class="">
     <nav id="navigate" class="">
       <div class="wrapper">
-        <a class="logo" onclick="closeMenu()" href="#">
+        <a class="logo" onclick="closeMenu()" href="#home">
           <img src="./assets/logo.png" alt="Logo do Fúria FC" />
         </a>
 
         <div class="menu">
           <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Jogos</a></li>
-            <li><a href="#">Galeria</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a onclick="closeMenu()" href="#home">Início</a></li>
+            <li><a onclick="closeMenu()" href="#jogos">Jogos</a></li>
+            <li><a onclick="closeMenu()" href="#galeria">Galeria</a></li>
+            <li><a onclick="closeMenu()" href="#contato">Contato</a></li>
           </ul>
         </div>
 
@@ -87,7 +87,7 @@
       </div>
     </nav>
 
-    <header class="wrapper">
+    <header id="home" class="wrapper">
       <h1>FÚRIA FUTEBOL CLUBE</h1>
       <h2>💛🖤</h2>
       <h3>#IssoAquiéFuria</h3>
@@ -127,7 +127,16 @@
         <header>
           <div class="banner-line"></div>
           <h2>GALERIA</h2>
-        </header>        
+        </header>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="wrapper">
+        <header>
+          <div class="banner-line"></div>
+          <h2>CONTATO</h2>
+        </header>
       </div>
     </section>
 

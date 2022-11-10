@@ -17,6 +17,9 @@
     --nav-height: 7.2rem;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 html,
 body {
@@ -72,17 +75,17 @@ section {
     padding-block: 4rem;
 }
 
-/*========= Header ============*/
+/*========= HOME ============*/
 
-header {
-    margin-top: calc(4.2rem + var(--nav-height));
+#home {
+    padding-top: calc(4.2rem + var(--nav-height));
 }
 
-header span {
+#home span {
     display: block;
 }
 
-header img {
+#home img {
     width: 20rem;
 
     margin-top: 4.0rem;
@@ -143,6 +146,9 @@ body.menu-expanded .close-menu {
     visibility: visible;
 }
 
+.menu {
+    transform: translateY(100%);
+}
 
 body.menu-expanded .menu {
     position: fixed;
@@ -154,6 +160,10 @@ body.menu-expanded .menu {
     height: 100vh;
 
     padding-top: var(--nav-height);
+
+    transition: transform 300ms;
+
+    transform: translateY(0%);
 }
 
 body.menu-expanded nav {
