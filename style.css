@@ -17,6 +17,7 @@
     --nav-height: 7.2rem;
 }
 
+
 html,
 body {
     width: 100%;
@@ -29,6 +30,8 @@ body {
     font-family: 'Roboto', sans-serif;
 
     text-align: center;
+
+    overflow: overlay;
 }
 
 .wrapper {
@@ -77,24 +80,11 @@ header img {
     margin-block: 4.0rem;
 }
 
-/*========= Section ============*/
-
-section {
-    margin-top: 4.2rem;
-
-    border-bottom: .5rem solid var(--primary-color);
-}
-
-.jogo {
-    margin-block: 3rem;
-}
-
 /*========= Navigation ============*/
-
 nav {
     display: flex;
 
-    height: 7.2rem;
+    height: var(--nav-height);
 
     position: fixed;
     top: 0;
@@ -113,13 +103,23 @@ nav .wrapper {
 }
 
 nav.scroll {
-    background: #000000;
-    width: 100vw;
+    background: var(--primary-color);
+    /* width: 100vw; */
+}
+
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /*========= Menu-Expanded ============*/
 body.menu-expanded {
     overflow: hidden;
+}
+
+body.menu-expanded > :not(nav) {
+    visibility: hidden;
 }
 
 .menu,
@@ -135,6 +135,7 @@ body.menu-expanded .close-menu {
     visibility: visible;
 }
 
+
 body.menu-expanded .menu {
     position: fixed;
     top: 0;
@@ -143,6 +144,8 @@ body.menu-expanded .menu {
 
     width: 100vw;
     height: 100vh;
+
+    padding-top: var(--nav-height);
 }
 
 body.menu-expanded nav {
@@ -152,8 +155,33 @@ body.menu-expanded nav {
 .menu ul {
     display: flex;
     flex-direction: column;
+    gap: 4.5rem;
+
+    margin-top: 6rem;
+
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
 }
 
-.menu a {
+.menu ul li a {
     color: white;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button {
+    position: relative;
+    z-index: 100;
+}
+
+/*========= Section ============*/
+
+section {
+    margin-top: 4.2rem;
+
+    border-bottom: .5rem solid var(--primary-color);
+}
+
+.jogo {
+    margin-block: 3rem;
 }
