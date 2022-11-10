@@ -75,22 +75,6 @@ section {
     padding-block: 4rem;
 }
 
-/*========= HOME ============*/
-
-#home {
-    padding-top: calc(4.2rem + var(--nav-height));
-}
-
-#home span {
-    display: block;
-}
-
-#home img {
-    width: 20rem;
-
-    margin-top: 4.0rem;
-}
-
 /*========= Navigation ============*/
 nav {
     display: flex;
@@ -99,8 +83,9 @@ nav {
 
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100vw;
+    
+    z-index: 100;
 }
 
 nav img {
@@ -114,8 +99,7 @@ nav .wrapper {
 }
 
 nav.scroll {
-    background: var(--primary-color);
-    width: 100vw;
+    background: var(--primary-color);    
 }
 
 nav button {
@@ -166,10 +150,6 @@ body.menu-expanded .menu {
     transform: translateY(0%);
 }
 
-body.menu-expanded nav {
-    position: relative;
-}
-
 .menu ul {
     display: flex;
     flex-direction: column;
@@ -190,6 +170,21 @@ body.menu-expanded .logo,
 body.menu-expanded button {
     position: relative;
     z-index: 100;
+}
+
+/*========= HOME ============*/
+#home {
+    padding-top: calc(4.2rem + var(--nav-height));
+}
+
+#home span {
+    display: block;
+}
+
+#home img {
+    width: 20rem;
+
+    margin-top: 4.0rem;
 }
 
 /*========= JOGOS ============*/
