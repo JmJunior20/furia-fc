@@ -68,6 +68,10 @@ h3 {
     margin-bottom: 1.6rem;
 }
 
+section {
+    padding-block: 4rem;
+}
+
 /*========= Header ============*/
 
 header {
@@ -76,13 +80,12 @@ header {
 
 header span {
     display: block;
-
 }
 
 header img {
     width: 20rem;
 
-    margin-block: 4.0rem;
+    margin-top: 4.0rem;
 }
 
 /*========= Navigation ============*/
@@ -179,12 +182,15 @@ body.menu-expanded button {
     z-index: 100;
 }
 
-/*========= Section ============*/
-
-section {
-    margin-top: 3.2rem;
+/*========= JOGOS ============*/
+#jogos .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
 }
 
-.jogo {
-    margin-block: 3rem;
+#jogos .card {
+    padding: 2.4rem;
+    border: 1px solid var(--primary-color);
+    border-radius: .2rem;
 }
