@@ -34,7 +34,9 @@
 
         <div class="menu">
           <ul>
-            <li><a onclick="closeMenu()" href="#home">Início</a></li>
+            <li>
+              <a class="active" onclick="closeMenu()" href="#home">Início</a>
+            </li>
             <li><a onclick="closeMenu()" href="#jogos">Jogos</a></li>
             <li><a onclick="closeMenu()" href="#galeria">Galeria</a></li>
             <li><a onclick="closeMenu()" href="#contato">Contato</a></li>
@@ -94,18 +96,24 @@
 
     <section id="home">
       <div class="wrapper">
-        <header>
-          <h1>FÚRIA FUTEBOL CLUBE</h1>
-          <h2>💛🖤</h2>
-        </header>
+        <div class="col-a">
+          <header>
+            <h1>FÚRIA FUTEBOL CLUBE</h1>
+            <h2>💛🖤</h2>
+          </header>
 
-        <div class="content">
-          <h3>#IssoAquiéFuria</h3>
-          <span>Os Auri-Negros</span>
-          <span>Amarelo e Preto</span>
-          <span>Presidente <a href="#" target="_blank">@ralphsoares0</a></span>
-          <span>SMM, RJ</span>
+          <div class="content">
+            <h3>#IssoAquiéFuria</h3>
+            <span>Os Auri-Negros</span>
+            <span>Amarelo e Preto</span>
+            <span
+              >Presidente <a href="#" target="_blank">@ralphsoares0</a></span
+            >
+            <span>SMM, RJ</span>
+          </div>
+        </div>
 
+        <div class="col-b">
           <img src="./assets/logo.png" alt="Logo do Fúria FC" />
         </div>
       </div>
@@ -186,13 +194,18 @@
 
     <footer>
       <div class="wrapper">
-        <p>
-          Produzido por
-          <a href="https://jmjuniordeveloper.netlify.app/" target="_blank"
-            >JMJunior</a
-          >
-        </p>
-        <p>©2022 Fúria FC - Todos os direitos reservados</p>
+        <div class="col-a">
+          <p>
+            Produzido por
+            <a href="https://jmjuniordeveloper.netlify.app/" target="_blank"
+              >JMJunior</a
+            >
+          </p>
+        </div>
+
+        <div class="col-b">
+          <p>©2022 Fúria FC - Todos os direitos reservados</p>
+        </div>
       </div>
     </footer>
 
